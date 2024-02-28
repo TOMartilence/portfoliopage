@@ -1,0 +1,509 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body{
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  background-image: url(./assets/images/bannerbg.jpg);
+  background-position: top;
+  background-size: cover;
+  height: 10vh;
+}
+
+.logotop{
+  width: 120px;
+  height: 70px;
+  position: relative;
+  
+}
+
+.navbar-link {
+  color: white !important; 
+}
+
+.navbar-link.active {
+  color: white !important;
+  opacity: 1;
+}
+
+nav.navbar{
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32 ease-in-out ;
+  
+}
+
+nav.navbar.scrolled{
+  padding: 0px 0 ;
+  background-color: #121212;
+}
+
+.navbar-link{
+  opacity: 0.65;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+  padding: 0 25px;
+}
+
+.navbar-text{
+  display: flex;
+  align-items: center;
+}
+
+.social-icon>a>svg{
+  display: inline-block;
+  margin: 14px;
+  height: 32px;
+  width: 32px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.5); 
+  border-radius: 35%;
+  transition: 0.3s ease-in-out  ;
+}
+
+.social-icon>a>svg:hover{
+  transform: scale(1.2);
+}
+
+.social-icon{
+  margin-right: 40px;
+}
+
+.me-auto{
+  margin-left: 40px;
+  
+}
+
+
+/* Existing button >.vvd styles */
+/* Existing button styles */
+button.vvd {
+  color: white;
+  border: solid 0.7px white;
+  padding: 3px;
+  width: 130px;
+  height: 50px;
+  transition: background 0.3s ease-in-out;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+button.vvd span {
+  z-index: 1;
+}
+
+button.vvd::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  color: #121212;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: width 0.3s ease-in-out;
+}
+
+button.vvd:hover::before {
+  width: 100%;
+}
+
+/* Add this to change the text color on hover */
+button.vvd:hover {
+  color: black;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+
+.banner{
+  position: relative;
+  top: 100px;
+  
+}
+
+h1{
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+.description{
+  margin-top: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+  line-height: 30px;
+}
+.tagline{
+  border: 1px solid rgb(179, 173, 173);
+  width: 300px;
+  text-align: center;
+  padding: 9px;
+  letter-spacing: 2px;
+
+}
+.danceinspace{
+  width: 650px;
+  margin-left: 40px;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: scale(1);
+
+  }
+  50% {
+    transform: scale(10);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo {
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+}
+@media (min-width: 900px) {
+  .logo {
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+}
+
+.runSkills{
+  font-family: 'Kanit', sans-serif;
+  font-weight: bolder;
+}
+
+.titular{
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1.5 px;
+  
+}
+#bottomconnect{
+  width: 200px;
+  height: 60px;
+  position: relative;
+  left: 20px;
+  bottom: 40px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: #fff
+  
+}
+
+#bottomconnect:hover{
+  color: black;
+}
+
+.ima{
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.skillSection{
+  position: relative;
+  top: 150px;
+  width: 77%;
+  margin: 0 auto;
+  border-radius: 0px;
+  margin-bottom: 300px;
+  background-color: #0d0a0a;
+  border: 1px white solid;
+
+}
+.car{
+  margin-top: 40px;
+}
+
+.headSkl{
+  background-color: transparent;
+  text-align: center  ;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+.progressBar{
+  width: 60%; 
+  margin: 0 auto;
+  height: 10px;
+  border-radius: 0px;
+  background-color: rgb(229, 57, 57);
+  margin-bottom: 16px;
+}
+.card {
+  padding: 20px;
+  height: 300px;
+  width: 300px;
+  margin: 10px auto;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  transition: scale 0.3s ease-in-out;  
+  border-radius: 0px;
+}
+
+.card:hover {
+  background-image: linear-gradient(to right, rgba(227, 112, 112, 0), rgb(200, 173, 173)) !important;
+   scale: 1.1;
+}
+
+.cardTitle {
+  text-align: center;
+  background-color:#5c2b2b;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 28.5px;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .cardTitle {
+  opacity: 0;
+}
+
+.cardDescription {
+  text-align: left  ;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  letter-spacing: 1.3px;
+}
+
+.card:hover .cardDescription {
+  opacity: 1;
+}
+
+.titrow{
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 60px;
+  padding-top: 40px;
+}
+
+.hardSkills {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.hardSkills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  border-radius: 5%;
+}
+
+
+
+
+
+
+
+.contactmeheading{
+  text-align: left;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 27%;
+  top: 10%;
+  
+}
+form {
+  max-width: 600px;
+  margin: auto;
+  
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+.sentbutton-container .vvd{
+  margin-left: 12px;
+}
+
+.contactSection{
+  margin-bottom: 40px;
+  position: relative;
+  border: 2px solid white;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+.sentResult{
+  position: fixed;
+  left: 50%;
+  font-weight: bolder;
+}
+footer{
+  position: absolute;
+  background-color: #121212;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 350px;
+  height: 400px;
+  background-color: #2ea263;
+  border: 3px rgb(67, 244, 161) solid;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: scale 0.3s linear;
+  background: repeating-linear-gradient(rgba(46, 162, 98, 0.195), rgba(46, 162, 98, 0.135) 2px, transparent 2px, transparent 4px);
+}
+
+.screen {
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  opacity: 0.323;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.3s linear;
+}
+
+.screen:hover {
+  opacity: 1;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 400px;
+}
+.overlay:hover{
+  scale: 1.1;
+}
+
+.insideDescription{
+  background: repeating-linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255) 1px,transparent,transparent 2px);
+  opacity: 0;
+  color: black;
+  text-align: center;
+  transition: opacity 0.3s linear;
+  padding: 10px;
+  font-weight: bolder;
+}
+
+.screen:hover .insideDescription{
+  opacity: 1;
+}
+
+.heading{
+ position: absolute;
+ bottom: 200px;
+ left: 6px;
+ transition: bottom 0.3s linear;
+ border: rgb(137, 226, 236) 2px solid;
+ color: rgb(0, 0, 0);
+}
+
+.screen:hover .heading{
+  position: absolute;
+  bottom: 0px;
+  border: 1px solid white;
+  padding: 5px;
+  left: 0px;
+  background-color: #ffffff;
+}
+
+.brow{
+  margin-bottom: 80px;
+  
+}
+
+.brow1{
+  animation: slideleft linear both;
+  animation-timeline: view();
+  animation-range: 5% cover 50%;
+}
+
+.borw2{
+  animation: slideright linear both;
+  animation-timeline: view();
+  animation-range: 5% cover 50%;
+}
+
+@keyframes slideleft {
+  from{
+    transform:translateX(-1000px) ;
+  }
+
+  to{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideright {
+  from{
+    transform: translateX(1000px);
+  }
+
+  to{
+    transform: translateX(0px);
+  }
+}
+
+.downLoadLink{
+color: rgb(165, 220, 234);
+}
+
