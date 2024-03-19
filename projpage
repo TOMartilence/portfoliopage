@@ -1,0 +1,40 @@
+import React from "react";
+import { Container} from "react-bootstrap";
+import ProjectCards from "../Components/ProjectCards";
+import "../Styles/Projects.css"
+function Projects() {
+  const projects = [
+    { id: 1, title: "Project 1", person: "person for Project 1",rollnumber:"snfians",imagelink:"",morelink:"" },
+    { id: 2, title: "Project 2", person: "person for Project 2",rollnumber:"asdbiausdd",imagelink:"",morelink:"" },
+    { id: 3, title: "Project 3", person: "person for Project 3",rollnumber:"adf34ina",imagelink:"",morelink:"" },
+    { id: 4, title: "Project 1", person: "person for Project 1",rollnumber:"snfians",imagelink:"",morelink:"" },
+    { id: 5, title: "Project 2", person: "person for Project 2",rollnumber:"asdbiausdd",imagelink:"",morelink:"" },
+    { id: 6, title: "Project 3", person: "person for Project 3",rollnumber:"adf34ina",imagelink:"",morelink:"" }
+  ];
+
+  return (
+    <div
+    style={{
+      backgroundImage: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+      height: "200vh",
+      position:"absolute",
+      top:"0",
+      left:"0",
+      width:"100%",
+      overflow:"hidden"
+    }}
+    >
+      <Container style={{ position: "relative",top:"200px" }}>
+        <div className="rows">
+          {projects.map(project => (
+            <div className="cardDiv" key={project.id}  style={{ marginBottom: "20px" }} >
+              <ProjectCards title={project.title} person={project.person} rollnumber={project.rollnumber} imagelink={project.imagelink} morelink={project.morelink}/>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </div>
+  );
+}
+
+export default Projects;
